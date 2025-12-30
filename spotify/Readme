@@ -1,0 +1,53 @@
+* Cómo ejecutar los endpoints y conectarse al usuario de Spotify
+
+Debera generar la carpeta venv en el proyecto ya que al guardar en el repositorio git lo ignoran, tambien se elaboro un archivo de requirements.txt en el proyecto con los paquetes a instalar.
+
+Para que pueda usar la aplicación y visualizar tus canciones y artistas favoritos, es necesario que primero cree su propia aplicación en Spotify Developer. Esto permitirá obtener las credenciales necesarias para la autenticación.
+
+1. Iniciar sesión en Spotify Developer
+
+La persona debe ingresar a:
+🔗 https://developer.spotify.com
+
+Luego iniciar sesión con su cuenta de Spotify.
+
+2. Crear una aplicación
+
+    Una vez dentro:
+
+    Ir al menú Dashboard.
+
+    Hacer clic en Create an App.
+
+    Escribir:
+
+    Nombre de la aplicación
+
+    Descripción
+
+    Agregar una Redirect URI, que será la dirección donde Spotify enviará el código de autorización.
+
+    Ejemplo de Redirect URI usada en esta aplicación:
+
+    - Utilize esta url ya que esta fue la que me genero Django la cual se compone de la ip del servidor, la url que se coloco en el api server y la url que se coloco en las views
+
+    http://127.0.0.1:8000/viewset/spotify-auth/callback/
+
+    En Application Type, seleccionar:
+    👉 WEB API
+
+-   Obtener credenciales (CLIENT_ID y CLIENT_SECRET)
+
+-   Después de crear la aplicación, Spotify generará automáticamente:
+
+    CLIENT_ID
+
+    CLIENT_SECRET
+
+    Estas credenciales son esenciales, ya que permiten que tu aplicación identifique al usuario y pueda acceder a:
+
+    Sus canciones favoritas
+
+    Sus artistas favoritos
+
+    Su información pública del perfil

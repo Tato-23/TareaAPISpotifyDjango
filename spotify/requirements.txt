@@ -1,0 +1,14 @@
+python3.14 -m venv venv
+.\venv\Scripts\Activate.ps1 # Entrar al entorno virtual 
+pip install django
+pip install djangorestframework
+pip install spotipy
+pip install dotenv
+pip install requests
+cd spotify # Asegúrate de estar en el directorio correcto
+django-admin startproject api_server . # Crear el proyecto Django
+python manage.py startapp viewset_spotify
+python manage.py makemigrations viewset_spotify # Crear migraciones
+python manage.py migrate # Aplicar migraciones
+python manage.py runserver # Iniciar el servidor de desarrollo
+
